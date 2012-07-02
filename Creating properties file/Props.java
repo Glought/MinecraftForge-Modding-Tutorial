@@ -13,9 +13,9 @@ public class Props {
 	//Configuration, used for save and load data
 	public static Configuration config;
 	
-	public static int bExampleBlockID;
-	public static int iExampleItemID;
-	public static boolean ExampleBoolean;
+	public static int bXXXID;
+
+	public static int iXXXID;
 	
 	//Initialization of the config
 	// Args: String mod used to name the config file to mods name
@@ -45,10 +45,12 @@ public class Props {
 		config.load();
 		/********************************/
 		//here you add all configurations like BlockIDs ItemIDs or other settings
-		//example
-		bExampleBlockID = config.getOrCreateBlockIdProperty("blockExample", 130).getInt(130);
-		iExampleItemID = config.getOrCreateIntProperty("itemExample", "item", 6000).getInt(6000);
-		ExampleBoolean = config.getOrCreateBooleanProperty("ExampleBoolean", "other", false).getBoolean(false);
+		//Props.config.CATEGORY_ITEM represents the item category others are
+		//Props.config.CATEGORY_BLOCK block category
+		//Props.config.CATEGORY_GENERAL general category
+		//use this to assign your category
+		iXXXID = config.getOrCreateIntProperty("itemXXX", Props.config.CATEGORY_ITEM, 6000).getInt(6000);
+		bXXXID = config.getOrCreateBlockIdProperty("blockXXX", 130).getInt(130);
 		/*******************************/
 		//save the data
 		config.save();
