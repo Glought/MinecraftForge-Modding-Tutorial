@@ -15,3 +15,6 @@ i check if they are right or if i dont know what it is i try it out if i get it 
 
 i go and add time after time the tutorials to the minecraft forge wiki, where i write 'em in a longer way and explain more.
 
+## Credits ##
+
+Zero from minecraftforge for sharing Numbered texture Sheets
