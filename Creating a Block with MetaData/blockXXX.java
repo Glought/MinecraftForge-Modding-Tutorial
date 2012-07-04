@@ -1,4 +1,4 @@
-package net.minecraft.src.tutorial;
+package net.minecraft.src.tutorial.metablock;
 
 import net.minecraft.src.Block;
 import net.minecraft.src.EntityLiving;
@@ -20,6 +20,7 @@ public class blockXXX extends Block implements ITextureProvider {
 		//setBlockUnbreakable() //if you want that the block is unbreakable call this functions
 	}
 
+	//return the metadata of the block when it is dropped
 	@Override
     protected int damageDropped(int metadata)
     {
@@ -49,6 +50,6 @@ public class blockXXX extends Block implements ITextureProvider {
 	
 	@Override
 	public String getTextureFile(){
-		return "/tutorialtextures/blocks.png"; //return the block texture where the block texture is saved in
+		return mod_XXX.blockPNG; //return the block texture where the block texture is saved in
 	}
 }

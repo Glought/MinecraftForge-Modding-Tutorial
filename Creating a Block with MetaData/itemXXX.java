@@ -1,4 +1,4 @@
-package net.minecraft.src.tutorial;
+package net.minecraft.src.tutorial.metablock;
 
 import net.minecraft.src.Item;
 import net.minecraft.src.forge.ITextureProvider; //Handler for the Textures
@@ -13,7 +13,7 @@ public class itemXXX extends Item implements ITextureProvider {
 	// this method is needed to use the sprite system from forge
 	@Override
 	public String getTextureFile(){
-		return "/tutorial/items.png"; // return the texture file where the icon is in
+		return mod_XXX.itemPNG; // return the texture file where the icon is in
 	}
 
 }

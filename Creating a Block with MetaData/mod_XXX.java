@@ -1,4 +1,4 @@
-package net.minecraft.src.tutorial;
+package net.minecraft.src.tutorial.metablock;
 
 import net.minecraft.src.BaseMod;
 import net.minecraft.src.Block;
@@ -13,6 +13,8 @@ public class mod_XXX extends BaseMod {
 	public static Block blockXXX; // Our block we want to create with a recipe
 	public static Item itemXXX; // our item we want to create with a recipe
 	
+	public static final String itemPNG = "/tutorialtextures/items.png";
+	public static final String blockPNG = "/tutorialtextures/blocks.png";
 	
 	@Override
 	public String getVersion() {
@@ -21,8 +23,8 @@ public class mod_XXX extends BaseMod {
 
 	@Override
 	public void load() {
-		MinecraftForgeClient.preloadTexture("/tutorialtextures/blocks.png");
-		MinecraftForgeClient.preloadTexture("/tutorialtextures/items.png");
+		MinecraftForgeClient.preloadTexture(this.blockPNG);
+		MinecraftForgeClient.preloadTexture(this.itemPNG);
 		this.registerBlocks(); //register all blocks
 		this.addNames(); //adding all names
 		this.registerRecipes(); //register all recipes
@@ -38,7 +40,11 @@ public class mod_XXX extends BaseMod {
 	//private method for proper source
 	private void addNames(){
 		//this have to be called so modloader knows the itemname and can add it to minecraft
-		ModLoader.addLocalization("blockXXX.name", "Block Log 1");
+		
+		//here we set the "blockname" to the name we want
+		//we set the names in the itemblockXXX.java already to a id this id we use to set the itemname
+		//with the additions of .name to tell modloader that this is a name 
+		ModLoader.addLocalization("blockXXX.name", "Block Log 1"); 
 		ModLoader.addLocalization("blockXXX2.name", "Block Log 2");
 	}
 	

@@ -15,6 +15,8 @@ public class mod_XXX extends BaseMod {
 	public static Item itemXXX; // our item we want to create with a recipe
 	public static Item itemtoolXXX; // our tool we want to create
 	
+	public static final String itemPNG = "/tutorialtextures/items.png";
+	
 	// Forge Hook to add own Tools types
 	// Params String name, int harvestLevel, int maxUses, float efficiency, int damage, int enchantability
 	static EnumToolMaterial materialStick = EnumHelper.addToolMaterial("STICK", 1, 180, 10.0F, 1, 7);
@@ -25,7 +27,7 @@ public class mod_XXX extends BaseMod {
 
 	@Override
 	public void load() {
-		MinecraftForgeClient.preloadTexture("/tutorialtextures/items.png");
+		MinecraftForgeClient.preloadTexture(this.itemPNG);
 		this.addNames(); //adding all names
 		this.registerRecipes(); //register all recipes
 	}
