@@ -1,0 +1,7 @@
+version: 
+MCP 6.2
+Forge 3.3.8.xxx
+
+conditions:
+Creating a Item
+ITextureProvider
