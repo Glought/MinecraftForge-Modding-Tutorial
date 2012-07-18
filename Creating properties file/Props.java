@@ -25,7 +25,7 @@ public class Props {
 		File file = new File(Minecraft.getMinecraftDir() + "/config/" + mod);
 		file.mkdir(); //creates the folder
 		//getting the config file
-		File newFile = new File(Minecraft.getMinecraftDir() + "/config/" + mod + "main.cfg");
+		File newFile = new File(Minecraft.getMinecraftDir() + "/config/" + mod + "/main.cfg");
 		
 		//try to create the config file
 		try{
